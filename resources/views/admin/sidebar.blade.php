@@ -9,7 +9,7 @@
               class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
-            <p>Администратор</p>
+            <p>АЗС Ориё</p>
             <a href="#"><i class="fa fa-circle text-success"></i> В сети</a>
           </div>
         </div>
@@ -52,6 +52,24 @@
             <a href="{{url('admin/news')}}">
               <i class="fa fa-book"></i> 
               <span>Новости</span>
+            </a>
+          </li>
+          <li class="{{ (request()->is('admin/team')) ? 'active' : '' }}">
+            <a href="{{url('admin/team')}}">
+              <i class="fa fa-book"></i> 
+              <span>Команда Орие</span>
+            </a>
+          </li>
+          <li class="{{ (request()->is('admin/price')) ? 'active' : '' }}">
+            <a href="{{url('admin/price')}}">
+              <i class="fa fa-book"></i> 
+              <span>Цены на топлива</span>
+            </a>
+          </li>
+          <li class="{{ (request()->is('admin/faq')) ? 'active' : '' }}">
+            <a href="{{url('admin/faq')}}">
+              <i class="fa fa-book"></i> 
+              <span>FAQ</br>Часто задаваемые вопросы</span>
             </a>
           </li>
         </ul>

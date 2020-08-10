@@ -3,14 +3,14 @@
       <div class="row d-flex align-items-center">
         <div class="col-lg-6 text-lg-left text-center">
           <div class="copyright">
-            &copy; Copyright <strong>Vesperr</strong>. All Rights Reserved
+            &copy;  <strong>Orio</strong>. All Rights Reserved
           </div>
           <div class="credits">
             <!-- All the links in the footer should remain intact. -->
             <!-- You can delete the links only if you purchased the pro version. -->
             <!-- Licensing information: https://bootstrapmade.com/license/ -->
             <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vesperr-free-bootstrap-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">I.Mukhammad</a>
+            Designed by <a href="https://vk.com/i_m_a10">I.Mukhammad</a>
           </div>
         </div>
         <div class="col-lg-6">
@@ -23,4 +23,5 @@
         </div>
       </div>
     </div>
+    <script src="{{asset('//code-ya.jivosite.com/widget/AVyuqHKIVA')}}" async></script>
   </footer><!-- End Footer -->
