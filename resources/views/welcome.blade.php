@@ -5,14 +5,44 @@
 <section id="hero" class="d-flex align-items-center">
 
 <div class="container">
-<div class="slider" id="main-slider"><!-- outermost container element -->
-	<div class="slider-wrapper"><!-- innermost wrapper element -->
-		<img src="img/1.png" alt="First" class="slide" /><!-- slides -->
-		<img src="img/more-services-4.jpg" alt="Second" class="slide" />
-		<img src="img/more-services-3.jpg" alt="Third" class="slide" />
-	</div>
+<div class="simple-slider page-slider">
+    <div class="slider-wrapper">
+      <!-- First slide -->
+      <div class="slider-slide">
+        <span class="slider-number"><img src="img/3.jpg" alt=""></span>
+      </div>
+
+      <!-- Second slide -->
+      <div class="slider-slide is-bright">
+        <span class="slider-number"><img src="img/3.jpg" alt=""></span>
+      </div>
+
+      <!-- Third slide -->
+      <div class="slider-slide">
+        <span class="slider-number"><img src="img/3.jpg" alt=""></span>
+      </div>
+
+      <!-- Fourth slide -->
+      <div class="slider-slide is-bright">
+        <span class="slider-number"><img src="img/3.jpg" alt=""></span>
+      </div>
+    </div>
+
+    <!--Pagination (Not required)-->
+    <div class="slider-pagination"></div>
+
+    <!-- Buttons (Not required) -->
+    <div class="slider-btn slider-btn-prev"></div>
+    <div class="slider-btn slider-btn-next"></div> 
+  </div>
+  <script>
+  new SimpleSlider('.page-slider', {
+    autoplay: true,
+    delay: 2000
+  });
+</script>
 </div>	
-</div>
+
 
 </section><!-- End Hero -->
 
@@ -530,16 +560,28 @@
             <i class="ri-phone-line"></i>
             <p><a href="tel:+992 {{\App\CustomClasses\Helper::getPhone()}}">{{\App\CustomClasses\Helper::getPhone()}}</a></p>
           </div>
-          <nav class="nav-menu d-none d-lg-block">
+            <div class="call-back">
             <ul>
-              <li class="get-started"><a href="login">Обратный звонок</a></li>
+              <li class="get-started"><a href="#">Обратный звонок</a></li>
             </ul>
-          </nav>
+          </div>
         </div>
       </div>
 
       <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+
+        @if(count($errors) > 0)
+        <div class="alert alert-danger" role="alert">
+            <button type="button" class="close" date-dismiss="alert">x</button>
+            <ul>
+                @foreach($errors->all() as $error) 
+                  <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+        <form action="{{ url('welcome/send')}}" method="post" role="form" class="php-email-form">
+        {{csrf_field()}}
           <div class="form-group">
             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
             <div class="validate"></div>
@@ -547,11 +589,7 @@
           <div class="form-group">
             <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
             <div class="validate"></div>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-            <div class="validate"></div>
-          </div>
+          </div> 
           <div class="form-group">
             <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
             <div class="validate"></div>
@@ -569,6 +607,7 @@
 
   </div>
 </section><!-- End Contact Section -->
+
 
 </main><!-- End #main -->
 

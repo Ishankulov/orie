@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>АЗС Ориё</title>
   <meta content="" name="descriptison">
@@ -23,6 +25,10 @@
   <link href="{{asset('vendor/aos/aos.css')}}" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('https://unpkg.com/leaflet@1.6.0/dist/leaflet.css')}}" />
   
+
+  <link rel="stylesheet" href="{{asset('dist/simpleSlider.min.css')}}">
+<script src="{{asset('dist/simpleSlider.min.js')}}"></script>
+<link rel="stylesheet" href="{{asset('css/theme.min.css')}}">
   
 
 

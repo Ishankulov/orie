@@ -8,6 +8,21 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+  .call-back .get-started a {
+    background: #f50000;
+    color: #fff;
+    border-radius: 50px;
+    margin: 0 0 0 -35px;
+    padding: 10px 25px;
+  }
+  
+  .call-back .get-started a:hover {
+    background: #ff495a;
+    color: #fff;
+  }
+
+
 #mapid { height: 280px; }
 
 ul.pagination {
@@ -371,7 +386,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   margin-top: 70px;
 }
 

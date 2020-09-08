@@ -15,12 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'Client\ClientHomeController@getHome');
-Route::get('welcome', 'Client\ClientHomeController@getNews');
+Route::get('/welcome', 'Client\ClientHomeController@getNews');
+Route::post('/welcome/send', 'Client\ClientHomeController@getmail');
 
 Route::group(
     [
         'middleware' => ['web']
-    ],
+    ], 
     function(){
 
 //BaseSiteInformationController
